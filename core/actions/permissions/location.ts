@@ -1,5 +1,6 @@
 import { PermissionStatus } from '@/infrastructure/interfaces/location'
 import * as Location from 'expo-location'
+import { Alert } from 'react-native'
 
 
 export const requestLocationPermission = async():Promise<PermissionStatus> => {
@@ -30,5 +31,7 @@ export const checkLocationPermission = async() => {
 }
 
 const manualPermissionRequest = async() => {
-
+    Alert.alert(
+        'Permiso de ubicación necesario'
+    )
 }
